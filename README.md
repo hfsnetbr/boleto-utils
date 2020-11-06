@@ -12,7 +12,7 @@ Biblioteca com funções úteis para a validação de todos os tipos de boleto
 ---------------------------------------------------------
 ### 1. Instalação
 
-Para utilizar o boleto-utils, baixe-o pelo repositório npm através do comando: `npm install --save @mrmgomes/boleto-utils`.
+Para utilizar o boleto-utils, baixe-o pelo repositório npm através do comando: `npm install --save @hfsnetbr/boleto-utils`.
 Depois importe-o em seu projeto javascript através do `require` (ES5) ou `import` (ES6) e já pode utilizar as funções da biblioteca.
 
 ---------------------------------------------------------

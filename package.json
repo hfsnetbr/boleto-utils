@@ -1,6 +1,6 @@
 {
-  "name": "@mrmgomes/boleto-utils",
-  "version": "1.2.0",
+  "name": "@hfsnetbr/boleto-utils",
+  "version": "1.2.1",
   "description": "Biblioteca com funções úteis para a validação de todos os tipos de boleto",
   "main": "./src/boleto-utils.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrmgomes/boleto-utils.git"
+    "url": "git+https://github.com/hfsnetbr/boleto-utils.git"
   },
   "keywords": [
     "boleto",
@@ -20,15 +20,15 @@
     "barras",
     "linha",
     "digitavel",
-    "mrmgomes",
+    "hfsnetbr",
     "javascript"
   ],
   "author": "Marcelo Gomes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrmgomes/boleto-utils/issues"
+    "url": "https://github.com/hfsnetbr/boleto-utils/issues"
   },
-  "homepage": "https://github.com/mrmgomes/boleto-utils#readme",
+  "homepage": "https://github.com/hfsnetbr/boleto-utils#readme",
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.0.1"

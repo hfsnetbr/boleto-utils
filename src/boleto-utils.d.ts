@@ -1,4 +1,4 @@
-declare module '@mrmgomes/boleto-utils' {
+declare module '@hfsnetbr/boleto-utils' {
     type int = number;
     /**
      * Verifica a numeração e retorna o tipo do código inserido.
