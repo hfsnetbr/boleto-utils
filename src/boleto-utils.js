@@ -953,7 +953,6 @@ exports.identificarData = (codigo, tipoCodigo) => {
         dataBoleto.setFullYear(1997);
         dataBoleto.setMonth(9);
         dataBoleto.setDate(7);
-        dataBoleto.setHours(23, 54, 59);
     }
 
     if (tipoCodigo === 'CODIGO_DE_BARRAS') {
@@ -963,10 +962,9 @@ exports.identificarData = (codigo, tipoCodigo) => {
             dataBoleto.setFullYear(parseInt(codigo.substr(19, 4)));
             console.log("ano: " + parseInt(codigo.substr(19, 4)))
             dataBoleto.setMonth(parseInt(codigo.substr(23, 2)) - 1);
-            console.log("mes: " + parseInt(codigo.substr(23, 2)))
-            dataBoleto.setDate(parseInt(codigo.substr(25, 2))+1);
-            console.log("dia: " + parseInt(codigo.substr(25, 2)))
-            dataBoleto.setHours(00, 00, 00);
+            console.log("mes: " + parseInt(codigo.substr(23, 2)));
+            dataBoleto.setDate(parseInt(codigo.substr(25, 2)));
+            console.log("dia: " + parseInt(codigo.substr(25, 2)));
         }
     } else if (tipoCodigo === 'LINHA_DIGITAVEL') {
         if (tipoBoleto == 'BANCO') {
@@ -974,17 +972,19 @@ exports.identificarData = (codigo, tipoCodigo) => {
         } else {
             cb = this.linhaDigitavel2CodBarras(codigo);
             dataBoleto.setFullYear(parseInt(cb.substr(19, 4)));
-            console.log("ano: " + cb.substr(19, 4))
+            console.log("ano: " + cb.substr(19, 4));
             dataBoleto.setMonth(parseInt(cb.substr(23, 2)) - 1);
-            console.log("mes: " + cb.substr(23, 2))
-            dataBoleto.setDate(parseInt(cb.substr(25, 2))+1);
-            console.log("dia: " + cb.substr(25, 2))
-            dataBoleto.setHours(00, 00, 00);
+            console.log("mes: " + cb.substr(23, 2));
+            dataBoleto.setDate(parseInt(cb.substr(25, 2)));
+            console.log("dia: " + cb.substr(25, 2));
         }
     }
+    dataBoleto.setHours(23, 59, 59);
 
-    dataBoleto.setDate(dataBoleto.getDate() + Number(fatorData));
-    dataBoleto.setTime(dataBoleto.getTime() + dataBoleto.getTimezoneOffset() - (3) * 60 * 60 * 1000);
+    if (tipoBoleto == 'BANCO') {
+        dataBoleto.setDate(dataBoleto.getDate() + Number(fatorData));
+        dataBoleto.setTime(dataBoleto.getTime() + dataBoleto.getTimezoneOffset() - (3) * 60 * 60 * 1000);
+    }
 
     return dataBoleto;
 }

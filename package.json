@@ -1,6 +1,6 @@
 {
   "name": "@hfsnetbr/boleto-utils",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Biblioteca com funções úteis para a validação de todos os tipos de boleto",
   "main": "./src/boleto-utils.js",
   "scripts": {
@@ -35,5 +35,8 @@
   },
   "dependencies": {
     "moment-timezone": "^0.5.31"
+  },
+  "directories": {
+    "test": "test"
   }
 }
